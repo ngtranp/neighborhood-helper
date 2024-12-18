@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "dede4d70-ca25-47be-b7ba-6ab8e75db7eb",
+		"name": "Collection",
+		"description": "Collection for all UserController endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5131146"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"email\": \"user@gmail.com\",\n    \"username\": \"newuser\",\n    \"password\": \"password123\",\n    \"role\": \"requester\",\n    \"certification\": \"something\"\n\n    //\"email\": \"user3@gmail.com\",\n    //\"username\": \"newuser3\",\n    //\"password\": \"password123\",\n    //\"role\": \"helper\",\n    //\"certification\": \"something\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/login?username=newuser&password=password123",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/username?username=newuser",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"username"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create service request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Need help with plumbing\",\n    \"requesterEmail\":\"haha@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/service-request?username=newuser&password=password123",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"service-request"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept service request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/accept-service-request?username=newuser3&password=password123&requestId=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"accept-service-request"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser3"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						},
+						{
+							"key": "requestId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete service request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/complete-service-request?username=newuser3&password=password123&requestId=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"complete-service-request"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser3"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						},
+						{
+							"key": "requestId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service request status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/service-request-status?username=newuser&password=password123&requestId=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"service-request-status"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "newuser"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						},
+						{
+							"key": "requestId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all service requestts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/users/all-service-requests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"all-service-requests"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}

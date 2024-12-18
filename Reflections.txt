@@ -1,0 +1,13 @@
+It was a great a journey working on this assignment. I had a lot of deep thinking and research on many topics, and used some advanced tech stacks.
+
+Challenges:
+1. The most challenging part was deploying and running everything in the Docker. Initially, why I started using Docker, because it is a very powerful and advanced tool that is widely used in many situations. So it can surely make my application much more easier to deploy and use in new environment, in which it will install JAVA, RabbitMQ and many other dependencies automatically. Although I spent a lot of time on Docker issues, I still thinking the time is worthy because the containerization in IT world is extremely popular nowadays.
+2. The second challenging part was the design of the micro-services architecture. I spent some time to consider what services I should have, how they should communicate and what responsibilities they should have. By thinking this though, I had much better understanding about the advantages of this modern structure, which is everything is more readable and clear to developers and very scaleable based on the business need.
+
+About the design:
+1. Why would I have the current design, one of the important considerations was security. My design made users only interact with the user-service, so the core-service is kind of protected. Therefore, the application is with stronger security and resilience.
+2. Role based access is also an important design which ensures the application be used in a proper way.
+
+In case the zip doesn't work, there is a git for this project public here:
+
+https://github.com/ngtranp/neighborhood-helper.git
